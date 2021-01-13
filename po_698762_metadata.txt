@@ -1,0 +1,221 @@
+==============================================================
+Version Number: 2.6
+==================================================================
+Company Information
+     Address
+          GeoEye
+          12076 Grant Street
+          Thornton, Colorado 80241
+          U.S.A.
+     Contact Information
+          On the Web: http://www.geoeye.com
+          Customer Service Phone (U.S.A.): 1.800.232.9037
+          Customer Service Phone (World Wide): 1.703.480.5670
+          Customer Service Fax (World Wide): 1.703.450.9570
+          Customer Service Email: info@geoeye.com
+          Customer Service Center hours of operation:
+               Monday - Friday, 8:00 - 20:00 Eastern Standard Time
+==================================================================
+
+Product Order Metadata
+
+Creation Date: 10/04/11
+Product Work Order Number: SG00050733_1
+Product Order Number: 698762
+Customer Project Name: Sample - Omdurman
+Ground Station ID: PGS
+License Type: Base
+   License Option 1: 1 Company / Corporation: E-GEOS
+Product Order Area (Geographic Coordinates)
+   Number of Coordinates: 4
+      Coordinate: 1
+      Latitude: 15.7541323075 degrees
+      Longitude: 32.4821382421 degrees
+      Coordinate: 2
+      Latitude: 15.8094108291 degrees
+      Longitude: 32.4827889210 degrees
+      Coordinate: 3
+      Latitude: 15.8094108291 degrees
+      Longitude: 32.5320160166 degrees
+      Coordinate: 4
+      Latitude: 15.7536588972 degrees
+      Longitude: 32.5311365778 degrees
+Product Order Area (Map Coordinates in Map Units)
+      Coordinate: 1
+      Map X (Easting): 444525.2610457344 meters
+      Map Y (Northing): 1741807.2409600783 meters
+      Coordinate: 2
+      Map X (Easting): 444609.9778642590 meters
+      Map Y (Northing): 1747921.7623783730 meters
+      Coordinate: 3
+      Map X (Easting): 449881.9929960953 meters
+      Map Y (Northing): 1747909.4135622066 meters
+      Coordinate: 4
+      Map X (Easting): 449774.0835159215 meters
+      Map Y (Northing): 1741742.6027355825 meters
+Sensor Type: Satellite
+Sensor Name: IKONOS-2
+Product Line: GeoStereo
+Processing Level: Standard Geometrically Corrected
+Image Type: PAN/MSI
+Interpolation Method: Cubic Convolution
+Multispectral Algorithm: Projective
+Stereo: Mono
+Mosaic: No
+Map Projection: Universal Transverse Mercator
+   UTM Specific Parameters
+      Hemisphere: N
+      Zone Number: 36
+Datum: WGS84
+Product Order Pixel Size: 1.0000000000 meters
+Product Order Map Units:  meters
+MTFC Applied: Yes
+DRA Applied: No
+Media: Electronic
+Product Media Format: Electronic
+File Format: GeoTIFF
+   TIFF Tiled: No
+   Compressed: No
+   Bits per Pixel per Band: 11 bits per pixel
+Multispectral Files: RGB
+
+==============================================================
+
+Source Image Metadata
+
+Number of Source Images: 2
+
+Source Image ID: 2003122708414870000011609712
+Product Image ID: 000
+Sensor: IKONOS-2
+Acquired Nominal GSD
+   Pan Cross Scan: 0.9058873057 meters
+   Pan Along Scan: 1.0018154383 meters
+   MS Cross Scan: 3.6235492229 meters
+   MS Along Scan: 4.0072617531 meters
+Scan Azimuth: 180.0144203506 degrees
+Scan Direction: Reverse
+Panchromatic TDI Mode: 13
+Nominal Collection Azimuth: 347.5901 degrees
+Nominal Collection Elevation: 63.50707 degrees
+Sun Angle Azimuth: 156.1241 degrees
+Sun Angle Elevation: 47.42863 degrees
+Acquisition Date/Time: 2003-12-27 08:41 GMT
+Percent Cloud Cover: 0
+
+--------------------------------------------------------------
+Source Image ID: 2003122708423860000011609713
+Product Image ID: 001
+Sensor: IKONOS-2
+Acquired Nominal GSD
+   Pan Cross Scan: 0.8579918742 meters
+   Pan Along Scan: 0.8385624290 meters
+   MS Cross Scan: 3.4319674969 meters
+   MS Along Scan: 3.3542497158 meters
+Scan Azimuth: 180.0144203506 degrees
+Scan Direction: Reverse
+Panchromatic TDI Mode: 13
+Nominal Collection Azimuth: 253.7719 degrees
+Nominal Collection Elevation: 76.70787 degrees
+Sun Angle Azimuth: 156.3809 degrees
+Sun Angle Elevation: 47.50945 degrees
+Acquisition Date/Time: 2003-12-27 08:42 GMT
+Percent Cloud Cover: 0
+
+==============================================================
+
+Product Space Metadata
+
+Number of Image Components: 2
+   X Components: 1
+   Y Components: 1
+Product MBR Geographic Coordinates
+   Number of Coordinates: 4
+      Coordinate: 1
+      Latitude: 15.8094110864 degrees
+      Longitude: 32.4819954477 degrees
+      Coordinate: 2
+      Latitude: 15.8095246542 degrees
+      Longitude: 32.5320344953 degrees
+      Coordinate: 3
+      Latitude: 15.7536285327 degrees
+      Longitude: 32.5321627079 degrees
+      Coordinate: 4
+      Latitude: 15.7535153866 degrees
+      Longitude: 32.4821373685 degrees
+Product Map Coordinates (in Map Units)
+   UL Map X (Easting): 444525.0000000000 meters
+   UL Map Y (Northing): 1747922.0000000000 meters
+Pixel Size X: 1.0000000000 meters
+Pixel Size Y: 1.0000000000 meters
+Product Order Map Units:  meters
+Columns: 5360 pixels
+Rows: 6184 pixels
+Reference Height: 393.8752441406 meters
+
+==============================================================
+
+Product Component Metadata
+
+Number of Components: 2
+
+Component ID: 0000000
+Product Image ID: 000
+Component File Name: po_698762_rgb_0000000.tif 
+Thumbnail File Name: po_698762_rgb_0000000_ovr.jpg
+Country Code: SU
+Component Geographic Corner Coordinates
+   Number of Coordinates: 4
+      Coordinate: 1
+      Latitude: 15.8094112423 degrees
+      Longitude: 32.4820608092 degrees
+      Coordinate: 2
+      Latitude: 15.8095246140 degrees
+      Longitude: 32.5320158205 degrees
+      Coordinate: 3
+      Latitude: 15.7562592238 degrees
+      Longitude: 32.5321380152 degrees
+      Coordinate: 4
+      Latitude: 15.7561462533 degrees
+      Longitude: 32.4821960462 degrees
+Component Map Coordinates (in Map Units)
+   UL Map X (Easting): 444532.0000000000 meters
+   UL Map Y (Northing): 1747922.0000000000 meters
+Pixel Size X: 1.0000000000 meters
+Pixel Size Y: 1.0000000000 meters
+Product Order Map Units:  meters
+Columns: 5351 pixels
+Rows: 5893 pixels
+Percent Component Cloud Cover: 0
+
+--------------------------------------------------------------
+Component ID: 0010000
+Product Image ID: 001
+Component File Name: po_698762_rgb_0010000.tif 
+Thumbnail File Name: po_698762_rgb_0010000_ovr.jpg
+Country Code: SU
+Component Geographic Corner Coordinates
+   Number of Coordinates: 4
+      Coordinate: 1
+      Latitude: 15.8094111087 degrees
+      Longitude: 32.4820047851 degrees
+      Coordinate: 2
+      Latitude: 15.8095246140 degrees
+      Longitude: 32.5320158205 degrees
+      Coordinate: 3
+      Latitude: 15.7552557491 degrees
+      Longitude: 32.5321403127 degrees
+      Coordinate: 4
+      Latitude: 15.7551426531 degrees
+      Longitude: 32.4821425798 degrees
+Component Map Coordinates (in Map Units)
+   UL Map X (Easting): 444526.0000000000 meters
+   UL Map Y (Northing): 1747922.0000000000 meters
+Pixel Size X: 1.0000000000 meters
+Pixel Size Y: 1.0000000000 meters
+Product Order Map Units:  meters
+Columns: 5357 pixels
+Rows: 6004 pixels
+Percent Component Cloud Cover: 0
+
+==============================================================
