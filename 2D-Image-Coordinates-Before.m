@@ -10,7 +10,8 @@ Obs = load('I:\Tamer\IKONOS\WGS84_Obse.txt'); % Observed Ground Coordinates.
 MIC_L = load('I:\Tamer\IKONOS\MIC_L.txt'); % Measured Image Coordinates (Left).
 MIC_R = load('I:\Tamer\IKONOS\MIC_R.txt'); % Measured Image Coordinates (Right).
 C = load('I:\Tamer\IKONOS\Coeff.txt'); % Polynomial Coefficients.
-N = length(Obs);% NORMALIZATION FOR CONTROL POINTS
+N = length(Obs);
+% NORMALIZATION FOR CONTROL POINTS
 for i = 1 : N;
 XL(i)=(Obs(i,2)-long_offL)/long_scaL;
 YL(i)=(Obs(i,3)-lat_offL)/lat_scaL;
@@ -99,5 +100,3 @@ syL = std(ryL);
 sxR = std(rxR);
 syR = std(ryR);
 stan_de = [sxL syL sxR syR];
-
-
