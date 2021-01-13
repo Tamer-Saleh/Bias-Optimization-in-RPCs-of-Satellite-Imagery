@@ -1,17 +1,17 @@
 format short g
 clc; clear all; close all;
-% GIVEN DATA FOR LEFT AND RIGHT IMAGE 
+% GIVEN DATA FOR LEFT AND RIGHT IMAGES 
 line_offL=+002946.00;sample_offL=+002675.00;lat_offL=+15.78280000;long_offL=+032.50710000;H_offL=+0394.000;
 line_scaL=+002947.00;sample_scaL=+002676.00;lat_scaL=+00.02680000;long_scaL=+000.02510000;H_scaL=+0064.000;
 line_offR=+003002.00;sample_offR=+002678.00;lat_offR=+15.78230000;long_offR=+032.50710000;H_offR=+0394.000;
 line_scaR=+003002.00;sample_scaR=+002679.00;lat_scaR=+00.02730000;long_scaR=+000.02510000;H_scaR=+0064.000;
-% LOAD GCPS & ICS AND COEFF
-Obs = load('I:\Tamer\IK\WGS84_Obse.txt'); % Observed Ground Coordinates.
-MIC_L = load('I:\Tamer\IK\MIC_L.txt'); % Measured Image Coordinates (Left).
-MIC_R = load('I:\Tamer\IK\MIC_R.txt'); % Measured Image Coordinates (Right).
-C = load('I:\Tamer\IK\Coeff.txt'); % Polynomial Coefficients.
+% LOAD GROUND CONTROL POINTS, IMAGE COORDINATES, AND RPCS
+Obs = load('I:\Tamer\IKONOS\WGS84_Obse.txt'); % Observed Ground Coordinates.
+MIC_L = load('I:\Tamer\IKONOS\MIC_L.txt'); % Measured Image Coordinates (Left).
+MIC_R = load('I:\Tamer\IKONOS\MIC_R.txt'); % Measured Image Coordinates (Right).
+C = load('I:\Tamer\IKONOS\Coeff.txt'); % Polynomial Coefficients.
 N = length(Obs);
-% NORMALIZATION FOR CPs
+% NORMALIZATION FOR CONTROL POINTS
 for i = 1 : N;
 XL(i)=(Obs(i,2)-long_offL)/long_scaL;
 YL(i)=(Obs(i,3)-lat_offL)/lat_scaL;
@@ -24,7 +24,7 @@ ynL(i)=((MIC_L(i,3))-(line_offL))/(line_scaL);
 xnR(i)=((MIC_R(i,2))-(sample_offR))/(sample_scaR);
 ynR(i)=((MIC_R(i,3))-(line_offR))/(line_scaR);
 end 
-% The Polynomial form is as follows 
+% THE POLYNOMIAL FORM IS AS FOLLOWS
 for i = 1 : N;
 F1(i) = ((C(2,1)-(ynL(i)*C(2,2)))*(XL(i)))+((C(3,1)-(ynL(i)*C(3,2)))*(YL(i)))+...
     ((C(4,1)-(ynL(i)*C(4,2)))*(ZL(i)))+((C(5,1)-(ynL(i)*C(5,2)))*(XL(i)*YL(i)))+...
@@ -68,7 +68,7 @@ F4(i) = ((C(2,7)-(xnR(i)*C(2,8)))*(XR(i)))+((C(3,7)-(xnR(i)*C(3,8)))*(YR(i)))+..
     ((C(20,7)-(xnR(i)*C(20,8)))*(ZR(i)*ZR(i)*ZR(i)));   
 end
 for i = 1 : N;
-% Partial derivatives F1, F2, F3, F4 w.r.t X,Y,Z
+% PARTIAL DERIVATIVES 
 F1_X(i) = ((C(2,1)-((ynL(i))*C(2,2))))+(((C(5,1)-((ynL(i))*C(5,2))))*(YL(i)))+...
     (((C(6,1)-((ynL(i))*C(6,2))))*(ZL(i)))+((2*(C(8,1)-((ynL(i))*C(8,2)))*(XL(i))))+...
     (((C(11,1)-((ynL(i))*C(11,2)))*(YL(i)*ZL(i))))+((3*(C(12,1)-((ynL(i))*C(12,2)))*(XL(i)*XL(i))))+...
@@ -130,7 +130,7 @@ F4_Z(i) = ((C(4,7)-((xnR(i))*C(4,8))))+(((C(6,7)-((xnR(i))*C(6,8))))*(XR(i)))+..
     ((2*(C(17,7)-((xnR(i))*C(17,8)))*(YR(i)*ZR(i))))+(((C(18,7)-((xnR(i))*C(18,8)))*(XR(i)*XR(i))))+...
     (((C(19,7)-((xnR(i))*C(19,8)))*(YR(i)*YR(i))))+((3*(C(20,7)-((xnR(i))*C(20,8)))*(ZR(i)*ZR(i))));
 end
-% Structure of B matrix (Jacobian matrix)
+% STRUCTURE OF JACOBIAN MATRIX OR B-MATRIX
 r = 4*N-3*N;
 B = zeros(4*N,3*N);
 K = zeros(4*N,1);
@@ -156,7 +156,7 @@ dx = DX(1:3:end);
 dy = DX(2:3:end);
 dz = DX(3:3:end);
 dxyz = [dx dy dz];
-% Enhanced Coordinates. 
+% ENHANCED COORDINATES 
 for i = 1 : N;
 X_GPS(i) = Obs(i,2);
 Y_GPS(i) = Obs(i,3);
